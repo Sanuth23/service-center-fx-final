@@ -62,7 +62,15 @@ public class DashboardFormController {
 
     @FXML
     void itemButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ItemForm.fxml"))));
+            stage.setTitle("Item Form");
+            stage.show();
+            //    stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

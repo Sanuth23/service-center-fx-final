@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+    <children>
+        <ImageView fitHeight="645.0" fitWidth="924.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 20%;">
+            <image>
+                <Image url="@../img/img.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="37.0" layoutY="53.0" prefHeight="18.0" prefWidth="78.0" text="Item Code" />
+        <Label layoutX="174.0" layoutY="53.0" prefHeight="18.0" prefWidth="106.0" text="Item Name" />
+        <Label layoutX="420.0" layoutY="51.0" prefHeight="18.0" prefWidth="106.0" text="Category" />
+        <Label layoutX="638.0" layoutY="54.0" prefHeight="18.0" prefWidth="106.0" text="Repair Price" />
+        <JFXTextField fx:id="txtCode" layoutX="37.0" layoutY="70.0" prefHeight="27.0" prefWidth="106.0" />
+        <JFXTextField fx:id="txtName" layoutX="173.0" layoutY="70.0" prefHeight="27.0" prefWidth="216.0" />
+        <JFXTextField fx:id="txtPrice" layoutX="639.0" layoutY="71.0" prefHeight="27.0" prefWidth="174.0" />
+        <JFXTextField fx:id="txtSearch" layoutX="37.0" layoutY="122.0" prefHeight="27.0" prefWidth="315.0" promptText="Search" />
+        <JFXComboBox fx:id="cmbCategory" layoutX="423.0" layoutY="70.0" prefHeight="25.0" prefWidth="174.0" />
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="7.0" onAction="#backButtonOnAction" prefHeight="32.0" prefWidth="38.0">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/imgBackButton.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="704.0" layoutY="121.0" onAction="#updateButtonOnAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: B71375;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="807.0" layoutY="122.0" onAction="#saveButtonOnAction" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #0766AD;" text="Save" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="812.0" layoutY="554.0" onAction="#reloadButtonOnAction" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #175e1e;" text="Reload" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXTreeTableView fx:id="tblItem" layoutX="38.0" layoutY="165.0" prefHeight="375.0" prefWidth="848.0" style="-fx-opacity: 80%; -fx-fixed-cell-size: 50px;">
+            <columns>
+                <TreeTableColumn fx:id="colCode" prefWidth="108.41766738891602" text="ID" />
+                <TreeTableColumn fx:id="colName" prefWidth="240.5823516845703" text="Name" />
+                <TreeTableColumn fx:id="colCategory" prefWidth="199.99996948242188" text="Category" />
+                <TreeTableColumn fx:id="colPrice" prefWidth="163.1646728515625" text="Repair Price" />
+                <TreeTableColumn fx:id="colOption" prefWidth="119.8353271484375" text="Option" />
+            </columns>
+        </JFXTreeTableView>
+        <JFXButton layoutX="713.0" layoutY="555.0" onAction="#reportButtonOnAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Report" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>
