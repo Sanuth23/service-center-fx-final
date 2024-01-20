@@ -53,7 +53,7 @@
         </JFXButton>
         <JFXTreeTableView fx:id="tblItem" layoutX="38.0" layoutY="165.0" prefHeight="375.0" prefWidth="848.0" style="-fx-opacity: 80%; -fx-fixed-cell-size: 50px;">
             <columns>
-                <TreeTableColumn fx:id="colCode" prefWidth="108.41766738891602" text="ID" />
+                <TreeTableColumn fx:id="colCode" prefWidth="108.41766738891602" text="Code" />
                 <TreeTableColumn fx:id="colName" prefWidth="240.5823516845703" text="Name" />
                 <TreeTableColumn fx:id="colCategory" prefWidth="199.99996948242188" text="Category" />
                 <TreeTableColumn fx:id="colPrice" prefWidth="163.1646728515625" text="Repair Price" />
