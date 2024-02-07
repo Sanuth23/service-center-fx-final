@@ -1,6 +1,6 @@
 package dao.custom;
 
-import dao.util.CrudDao;
+import dao.CrudDao;
 import entity.Customer;
 
 import java.sql.SQLException;

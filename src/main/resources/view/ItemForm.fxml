@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
     <children>
         <ImageView fitHeight="645.0" fitWidth="924.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 20%;">
             <image>
@@ -20,13 +15,13 @@
         </ImageView>
         <Label layoutX="37.0" layoutY="53.0" prefHeight="18.0" prefWidth="78.0" text="Item Code" />
         <Label layoutX="174.0" layoutY="53.0" prefHeight="18.0" prefWidth="106.0" text="Item Name" />
-        <Label layoutX="420.0" layoutY="51.0" prefHeight="18.0" prefWidth="106.0" text="Category" />
-        <Label layoutX="638.0" layoutY="54.0" prefHeight="18.0" prefWidth="106.0" text="Repair Price" />
+        <Label layoutX="422.0" layoutY="51.0" prefHeight="18.0" prefWidth="106.0" text="Category" />
+        <Label layoutX="638.0" layoutY="54.0" prefHeight="18.0" prefWidth="106.0" text="Service Fee" />
         <JFXTextField fx:id="txtCode" layoutX="37.0" layoutY="70.0" prefHeight="27.0" prefWidth="106.0" />
         <JFXTextField fx:id="txtName" layoutX="173.0" layoutY="70.0" prefHeight="27.0" prefWidth="216.0" />
         <JFXTextField fx:id="txtPrice" layoutX="639.0" layoutY="71.0" prefHeight="27.0" prefWidth="174.0" />
         <JFXTextField fx:id="txtSearch" layoutX="37.0" layoutY="122.0" prefHeight="27.0" prefWidth="315.0" promptText="Search" />
-        <JFXComboBox fx:id="cmbCategory" layoutX="423.0" layoutY="70.0" prefHeight="25.0" prefWidth="174.0" />
+        <JFXTextField fx:id="txtCategory" layoutX="423.0" layoutY="70.0" prefHeight="25.0" prefWidth="174.0" />
         <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="7.0" onAction="#backButtonOnAction" prefHeight="32.0" prefWidth="38.0">
             <graphic>
                 <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">

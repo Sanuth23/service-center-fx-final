@@ -11,5 +11,5 @@ public class ItemDto {
     private String code;
     private String name;
     private String category;
-    private double price;
+    private double serviceFee;
 }

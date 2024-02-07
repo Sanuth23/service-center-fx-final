@@ -1,4 +1,4 @@
-package dao.util;
+package dao;
 
 import dao.SuperDao;
 

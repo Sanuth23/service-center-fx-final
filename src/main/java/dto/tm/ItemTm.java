@@ -13,6 +13,6 @@ public class ItemTm extends RecursiveTreeObject<ItemTm> {
     private String code;
     private String name;
     private String category;
-    private double price;
+    private double serviceFee;
     private JFXButton btn;
 }
