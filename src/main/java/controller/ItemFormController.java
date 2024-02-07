@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -168,22 +169,48 @@ public class ItemFormController {
 
     @FXML
     void reloadButtonOnAction(ActionEvent event) {
+        loadItemTable();
+        tblItem.refresh();
+        clearFields();
+    }
 
+    @FXML
+    void saveButtonOnAction(ActionEvent event) {
+        try {
+            boolean isSaved = itemBo.saveItem(new ItemDto(txtCode.getText(), txtName.getText(),
+                    txtCategory.getText(),Double.parseDouble(txtPrice.getText()))
+            );
+            if (isSaved) {
+                new Alert(Alert.AlertType.INFORMATION,"Item Saved!").show();
+                loadItemTable();
+                clearFields();
+                tblItem.refresh();
+            }
+        } catch (SQLIntegrityConstraintViolationException ex){
+            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void updateButtonOnAction(ActionEvent event) {
+        try {
+            boolean isUpdated = itemBo.updateItem(new ItemDto(txtCode.getText(), txtName.getText(),
+                    txtCategory.getText(),Double.parseDouble(txtPrice.getText()))
+            );
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION,"Item Updated!").show();
+                loadItemTable();
+                tblItem.refresh();
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void reportButtonOnAction(ActionEvent event) {
 
     }
-
-    @FXML
-    void saveButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void updateButtonOnAction(ActionEvent event) {
-
-    }
-
 }

@@ -19,9 +19,9 @@
         <Label layoutX="638.0" layoutY="54.0" prefHeight="18.0" prefWidth="106.0" text="Service Fee" />
         <JFXTextField fx:id="txtCode" layoutX="37.0" layoutY="70.0" prefHeight="27.0" prefWidth="106.0" />
         <JFXTextField fx:id="txtName" layoutX="173.0" layoutY="70.0" prefHeight="27.0" prefWidth="216.0" />
+        <JFXTextField fx:id="txtCategory" layoutX="423.0" layoutY="70.0" prefHeight="25.0" prefWidth="174.0" />
         <JFXTextField fx:id="txtPrice" layoutX="639.0" layoutY="71.0" prefHeight="27.0" prefWidth="174.0" />
         <JFXTextField fx:id="txtSearch" layoutX="37.0" layoutY="122.0" prefHeight="27.0" prefWidth="315.0" promptText="Search" />
-        <JFXTextField fx:id="txtCategory" layoutX="423.0" layoutY="70.0" prefHeight="25.0" prefWidth="174.0" />
         <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="7.0" onAction="#backButtonOnAction" prefHeight="32.0" prefWidth="38.0">
             <graphic>
                 <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
