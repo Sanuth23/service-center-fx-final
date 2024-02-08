@@ -130,7 +130,15 @@ public class AdminDashboardFormController {
     }
 
     public void reportButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ReportForm.fxml"))));
+            stage.setTitle("Report Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void partButtonOnAction(ActionEvent event) {

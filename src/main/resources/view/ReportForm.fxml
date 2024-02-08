@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormController">
+    <children>
+        <ImageView fitHeight="608.0" fitWidth="942.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/img.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="121.0" layoutY="-19.0" prefHeight="93.0" prefWidth="691.0" style="-fx-background-color: #092635; -fx-background-radius: 20px;" />
+        <Label alignment="CENTER" layoutX="151.0" layoutY="9.0" prefHeight="55.0" prefWidth="361.0" text="E &amp; E Service Center" textAlignment="CENTER" textFill="WHITE" underline="true">
+            <font>
+                <Font name="Arial Bold" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDate" alignment="CENTER" layoutX="531.0" layoutY="14.0" prefHeight="45.0" prefWidth="126.0" text="yyyy-MM-dd" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="17.0" />
+            </font></Label>
+        <Label fx:id="lblTime" alignment="CENTER" layoutX="673.0" layoutY="14.0" prefHeight="45.0" prefWidth="113.0" text="HH:mm:ss" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="17.0" />
+            </font></Label>
+        <JFXButton layoutX="344.0" layoutY="149.0" onAction="#customerReportOnAction" prefHeight="55.0" prefWidth="246.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Customer Report" textFill="#8816bd">
+            <font>
+                <Font name="Arial Bold" size="22.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="344.0" layoutY="259.0" onAction="#itemReportOnAction" prefHeight="55.0" prefWidth="246.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Item Report" textFill="#8816bd">
+            <font>
+                <Font name="Arial Bold" size="22.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="345.0" layoutY="486.0" onAction="#placeOrderReportOnAction" prefHeight="55.0" prefWidth="246.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Place Order Report" textFill="#8816bd">
+            <font>
+                <Font name="Arial Bold" size="22.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="14.0" layoutY="89.0" onAction="#backButtonOnAction" prefHeight="38.0" prefWidth="88.0" style="-fx-background-color: orange; -fx-background-radius: 20;" text="Back">
+            <font>
+                <Font name="Arial Bold" size="19.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="344.0" layoutY="370.0" onAction="#partReportOnAction" prefHeight="55.0" prefWidth="246.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Part Report" textFill="#8816bd">
+            <font>
+                <Font name="Arial Bold" size="22.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>
