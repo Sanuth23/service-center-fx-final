@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="583.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+    <children>
+        <ImageView fitHeight="609.0" fitWidth="900.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 20%;">
+            <image>
+                <Image url="@../img/img.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="58.0" layoutY="31.0" prefHeight="22.0" prefWidth="71.0" text="Customer ID" />
+        <JFXComboBox fx:id="cmbCustId" layoutX="58.0" layoutY="46.0" prefHeight="31.0" prefWidth="154.0" />
+        <Label layoutX="60.0" layoutY="97.0" prefHeight="22.0" prefWidth="71.0" text="Item Code" />
+        <JFXComboBox fx:id="cmbCode" layoutX="60.0" layoutY="112.0" prefHeight="31.0" prefWidth="150.0" />
+        <Label layoutX="276.0" layoutY="26.0" prefHeight="22.0" prefWidth="71.0" text="Name" />
+        <JFXTextField fx:id="txtCustName" layoutX="276.0" layoutY="48.0" prefHeight="27.0" prefWidth="211.0" />
+        <Label layoutX="278.0" layoutY="93.0" prefHeight="22.0" prefWidth="71.0" text="Item Name" />
+        <JFXTextField fx:id="txtItemName" layoutX="278.0" layoutY="115.0" prefHeight="27.0" prefWidth="211.0" />
+        <Label layoutX="547.0" layoutY="94.0" prefHeight="22.0" prefWidth="71.0" text="Service Fee" />
+        <JFXTextField fx:id="txtServiceFee" layoutX="547.0" layoutY="116.0" prefHeight="27.0" prefWidth="140.0" />
+        <Label layoutX="59.0" layoutY="158.0" prefHeight="22.0" prefWidth="71.0" text="Issue" />
+        <JFXTextField fx:id="txtIssue" layoutX="56.0" layoutY="177.0" prefHeight="27.0" prefWidth="433.0" />
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="7.0" onAction="#backButtonOnAction" prefHeight="32.0" prefWidth="38.0">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/imgBackButton.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="753.0" layoutY="178.0" onAction="#addToCartButtonOnAction" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #C92C6D; -fx-background-radius: 8;" text="Add To Cart" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="757.0" layoutY="530.0" onAction="#placeOrderButtonOnAction" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: #5D9C59; -fx-background-radius: 10;" text="Place Order" textFill="#fffdff">
+            <font>
+                <Font name="Arial Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <Label layoutX="54.0" layoutY="537.0" prefHeight="22.0" prefWidth="59.0" text="Total   :">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblTotal" layoutX="113.0" layoutY="537.0" prefHeight="22.0" prefWidth="59.0" text="0.00">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Label>
+        <JFXTreeTableView fx:id="tblOrder" layoutX="19.0" layoutY="235.0" prefHeight="280.0" prefWidth="863.0" style="-fx-opacity: 80%; -fx-fixed-cell-size: 50px;">
+            <columns>
+                <TreeTableColumn fx:id="colCode" prefWidth="104.0" text="Code" />
+                <TreeTableColumn fx:id="colItemName" prefWidth="198.27210998535156" text="Item Name" />
+                <TreeTableColumn fx:id="colIssue" prefWidth="279.69384765625" text="Issue" />
+                <TreeTableColumn fx:id="colAdvance" prefWidth="143.30615234375" text="Service Fee" />
+                <TreeTableColumn fx:id="colOption" prefWidth="119.98797607421875" text="Option" />
+            </columns>
+        </JFXTreeTableView>
+        <Label fx:id="lblOrderId" layoutX="735.0" layoutY="35.0" prefHeight="37.0" prefWidth="140.0">
+            <font>
+                <Font name="Arial Bold" size="15.0" />
+            </font>
+        </Label>
+      <Label fx:id="lblDate" layoutX="735.0" layoutY="108.0" prefHeight="37.0" prefWidth="140.0">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

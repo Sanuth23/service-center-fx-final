@@ -20,6 +20,8 @@ public class PlaceOrder {
     private String orderId;
     private Date date;
     private String issue;
+    private double total;
+    private String status;
 
     @ManyToOne()
     @JoinColumn(name = "customerId")
@@ -32,9 +34,11 @@ public class PlaceOrder {
     @OneToMany(mappedBy = "orders")
     private List<OrderDetail> orderDetails = new ArrayList<>();
 
-    public PlaceOrder(String orderId, Date date, String issue) {
+    public PlaceOrder(String orderId, Date date, String issue, double total, String status) {
         this.orderId = orderId;
         this.date = date;
         this.issue = issue;
+        this.total = total;
+        this.status = status;
     }
 }

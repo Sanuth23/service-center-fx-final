@@ -24,8 +24,7 @@ public class OrderDetail {
     @JoinColumn(name = "itemCode")
     private Item item;
 
-    private String addParts;
-    private double total;
-    private String orderStatus;
+    private String partId;
+    private int partQty;
 
 }

@@ -90,7 +90,15 @@ public class DashboardFormController {
 
     @FXML
     void placeOrderButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/PlaceOrderForm.fxml"))));
+            stage.setTitle("Place Order Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
