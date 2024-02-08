@@ -3,6 +3,7 @@ package controller;
 import bo.BoFactory;
 import bo.BoType;
 import bo.custom.UserBo;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import dto.UserDto;
 import javafx.animation.Animation;
@@ -32,7 +33,7 @@ public class LoginFormController {
     private JFXTextField txtUsername;
 
     @FXML
-    private JFXTextField txtPassword;
+    private JFXPasswordField txtPassword;
 
     @FXML
     private Label lblDate;
@@ -41,6 +42,7 @@ public class LoginFormController {
     private Label lblTime;
 
     public static String currentUser;
+    public static String currentUserId;
 
     private UserBo userBo = BoFactory.getInstance().getBo(BoType.USER);
 
@@ -92,6 +94,8 @@ public class LoginFormController {
                     }
                 }
                 currentUser=dto.getJobRole();
+                currentUserId=dto.getUserId();
+
                 return;
             }
         }

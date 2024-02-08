@@ -93,7 +93,15 @@ public class AdminDashboardFormController {
 
     @FXML
     void passwordButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ChangePasswordForm.fxml"))));
+            stage.setTitle("Change Password Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
