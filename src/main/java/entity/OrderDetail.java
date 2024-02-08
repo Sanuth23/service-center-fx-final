@@ -24,7 +24,11 @@ public class OrderDetail {
     @JoinColumn(name = "itemCode")
     private Item item;
 
-    private String partId;
+    @ManyToOne()
+    @JoinColumn(name = "partId")
+    private Part part;
+
     private int partQty;
+    private double partAmount;
 
 }

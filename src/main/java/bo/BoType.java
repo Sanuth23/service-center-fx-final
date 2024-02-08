@@ -1,6 +1,6 @@
 package bo;
 
 public enum BoType {
-    CUSTOMER,ITEM,ORDER,ORDER_DETAIL
+    CUSTOMER,ITEM,ORDER,ORDER_DETAIL,PART,USER
 
 }
