@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -22,6 +23,8 @@ public class User {
     private String name;
     private String contactNumber;
     private String jobRole;
+
+    @Column(name = "username",nullable = false, unique = true)
     private String username;
     private String password;
 

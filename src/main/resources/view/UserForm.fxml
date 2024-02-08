@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
+    <children>
+        <ImageView fitHeight="645.0" fitWidth="924.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 20%;">
+            <image>
+                <Image url="@../img/img.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="37.0" layoutY="53.0" prefHeight="18.0" prefWidth="78.0" text="User ID" />
+        <Label layoutX="176.0" layoutY="53.0" prefHeight="18.0" prefWidth="106.0" text="Name" />
+        <Label layoutX="424.0" layoutY="54.0" prefHeight="18.0" prefWidth="106.0" text="Contact Number" />
+        <Label layoutX="672.0" layoutY="52.0" prefHeight="18.0" prefWidth="106.0" text="Job Role" />
+        <JFXTextField fx:id="txtId" layoutX="37.0" layoutY="69.0" prefHeight="27.0" prefWidth="106.0" />
+        <JFXTextField fx:id="txtName" layoutX="176.0" layoutY="69.0" prefHeight="27.0" prefWidth="214.0" />
+        <JFXTextField fx:id="txtContactNumber" layoutX="424.0" layoutY="70.0" prefHeight="27.0" prefWidth="205.0" />
+        <JFXTextField fx:id="txtJobRole" layoutX="672.0" layoutY="69.0" prefHeight="27.0" prefWidth="151.0" />
+        <JFXTextField fx:id="txtUsername" layoutX="37.0" layoutY="135.0" prefHeight="27.0" prefWidth="352.0" />
+        <JFXTextField fx:id="txtPassword" layoutX="424.0" layoutY="132.0" prefHeight="27.0" prefWidth="207.0" />
+        <JFXTextField fx:id="txtSearch" layoutX="39.0" layoutY="182.0" prefHeight="27.0" prefWidth="315.0" promptText="Search" />
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="7.0" onAction="#backButtonOnAction" prefHeight="32.0" prefWidth="38.0">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/imgBackButton.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="706.0" layoutY="179.0" onAction="#updateButtonOnAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: B71375;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="809.0" layoutY="180.0" onAction="#saveButtonOnAction" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #0766AD;" text="Save" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="811.0" layoutY="561.0" onAction="#reloadButtonOnAction" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #175e1e;" text="Reload" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXTreeTableView fx:id="tblUser" layoutX="38.0" layoutY="233.0" prefHeight="317.0" prefWidth="848.0" style="-fx-opacity: 80%; -fx-fixed-cell-size: 50px;">
+            <columns>
+                <TreeTableColumn fx:id="colId" prefWidth="61.65656280517578" text="ID" />
+                <TreeTableColumn fx:id="colName" prefWidth="107.5505142211914" text="Name" />
+                <TreeTableColumn fx:id="colContact" prefWidth="132.44949340820312" text="Contact Number" />
+                <TreeTableColumn fx:id="colJobRole" prefWidth="84.69696044921875" text="Job Role" />
+                <TreeTableColumn fx:id="colEmail" prefWidth="226.80734252929688" text="Username (Email)" />
+                <TreeTableColumn fx:id="colPassword" prefWidth="127.19256591796875" text="Password" />
+                <TreeTableColumn fx:id="colOption" prefWidth="91.7935791015625" text="Option" />
+            </columns>
+        </JFXTreeTableView>
+      <Label layoutX="37.0" layoutY="120.0" prefHeight="18.0" prefWidth="106.0" text="Username (Email)" />
+      <Label layoutX="424.0" layoutY="119.0" prefHeight="18.0" prefWidth="106.0" text="Password" />
+    </children>
+</AnchorPane>

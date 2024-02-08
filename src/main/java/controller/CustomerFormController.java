@@ -105,7 +105,7 @@ public class CustomerFormController {
             txtId.setText(newValue.getValue().getId());
             txtName.setText(newValue.getValue().getName());
             txtContactNumber.setText(newValue.getValue().getContactNumber());
-            txtEmail.setText(String.valueOf(newValue.getValue().getEmail()));
+            txtEmail.setText(newValue.getValue().getEmail());
         }
     }
 
