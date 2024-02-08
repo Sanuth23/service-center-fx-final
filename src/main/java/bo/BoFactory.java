@@ -2,6 +2,7 @@ package bo;
 
 import bo.custom.impl.CustomerBoImpl;
 import bo.custom.impl.ItemBoImpl;
+import bo.custom.impl.OrderBoImpl;
 
 public class BoFactory {
     private static  BoFactory boFactory;
@@ -15,7 +16,7 @@ public class BoFactory {
         switch (boType){
             case CUSTOMER: return (T) new CustomerBoImpl();
             case ITEM: return (T) new ItemBoImpl();
-         //   case ORDER: return (T) new OrderBoImpl();
+            case ORDER: return (T) new OrderBoImpl();
          //   case ORDER_DETAIL: return (T) new OrderDetailBoImpl();
         }
         return null;

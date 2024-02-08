@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #307abb;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+<AnchorPane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #307abb;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardFormController">
     <children>
         <ImageView fitHeight="608.0" fitWidth="942.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -33,6 +33,16 @@
          </font>
       </JFXButton>
       <JFXButton layoutX="66.0" layoutY="232.0" onAction="#itemButtonOnAction" prefHeight="70.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Item" textFill="#8816bd">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="675.0" layoutY="130.0" onAction="#userButtonOnAction" prefHeight="70.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Users" textFill="#8816bd">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="672.0" layoutY="232.0" onAction="#reportButtonOnAction" prefHeight="70.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Report" textFill="#8816bd">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
