@@ -71,7 +71,7 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public List<PlaceOrderDto> getAll() throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
-        Query query = session.createQuery("FROM PlaceOrder ");
+        Query query = session.createQuery("FROM PlaceOrder");
         List<PlaceOrder> orderList = query.list();
         List<PlaceOrderDto> list = new ArrayList<>();
         for (PlaceOrder orders:orderList) {
