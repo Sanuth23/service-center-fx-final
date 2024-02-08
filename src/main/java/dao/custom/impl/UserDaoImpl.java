@@ -65,7 +65,7 @@ public class UserDaoImpl implements UserDao {
     public boolean delete(String value) throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.find(Customer.class,value));
+        session.delete(session.find(User.class,value));
         transaction.commit();
         session.close();
         return true;
@@ -74,7 +74,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public List<User> getAll() throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
-        Query query = session.createQuery("FROM Customer");
+        Query query = session.createQuery("FROM User");
         List<User> list = query.list();
         session.close();
         return list;

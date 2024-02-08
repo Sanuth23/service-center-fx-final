@@ -214,11 +214,20 @@ public class CustomerFormController {
 
     @FXML
     void backButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) customerPane.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/DashboardForm.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if (LoginFormController.currentUser.equalsIgnoreCase("admin")){
+            Stage stage = (Stage) customerPane.getScene().getWindow();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AdminDashboardForm.fxml"))));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }else {
+            Stage stage = (Stage) customerPane.getScene().getWindow();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/DashboardForm.fxml"))));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

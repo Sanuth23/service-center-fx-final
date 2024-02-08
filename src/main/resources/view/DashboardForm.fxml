@@ -27,17 +27,17 @@
             <font>
                 <Font name="Arial Bold" size="17.0" />
             </font></Label>
-      <JFXButton layoutX="65.0" layoutY="130.0" onAction="#customerButtonOnAction" prefHeight="70.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Customer" textFill="#8816bd">
+      <JFXButton layoutX="65.0" layoutY="126.0" onAction="#customerButtonOnAction" prefHeight="55.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Customer" textFill="#8816bd">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="66.0" layoutY="232.0" onAction="#itemButtonOnAction" prefHeight="70.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Item" textFill="#8816bd">
+      <JFXButton layoutX="66.0" layoutY="200.0" onAction="#itemButtonOnAction" prefHeight="55.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Item" textFill="#8816bd">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="66.0" layoutY="435.0" onAction="#placeOrderButtonOnAction" prefHeight="77.0" prefWidth="169.0" style="-fx-background-color: orange; -fx-background-radius: 20;" text="Place Order" textFill="#390404">
+      <JFXButton layoutX="66.0" layoutY="437.0" onAction="#placeOrderButtonOnAction" prefHeight="71.0" prefWidth="169.0" style="-fx-background-color: orange; -fx-background-radius: 20;" text="Place Order" textFill="#390404">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
@@ -52,7 +52,12 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="65.0" layoutY="337.0" onAction="#orderDetailButtonOnAction" prefHeight="70.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Order Detail" textFill="#8816bd">
+      <JFXButton layoutX="65.0" layoutY="348.0" onAction="#orderDetailButtonOnAction" prefHeight="65.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Order Detail" textFill="#8816bd">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="67.0" layoutY="275.0" onAction="#partButtonOnAction" prefHeight="55.0" prefWidth="169.0" style="-fx-background-color: B4B1BD; -fx-background-radius: 20;" text="Part" textFill="#8816bd">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>

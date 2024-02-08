@@ -75,7 +75,15 @@ public class AdminDashboardFormController {
 
     @FXML
     void logoutButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"))));
+            stage.setTitle("Login Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -90,14 +98,42 @@ public class AdminDashboardFormController {
 
     @FXML
     void placeOrderButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/PlaceOrderForm.fxml"))));
+            stage.setTitle("Place Order Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void userButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserForm.fxml"))));
+            stage.setTitle("User Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void reportButtonOnAction(ActionEvent event) {
 
+    }
+
+    public void partButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/PartForm.fxml"))));
+            stage.setTitle("Part Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
