@@ -16,20 +16,25 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.function.Predicate;
 
 public class UserFormController {
 
     @FXML
-    private AnchorPane customerPane;
+    private AnchorPane pane;
 
     @FXML
     private JFXTextField txtId;
@@ -189,18 +194,48 @@ public class UserFormController {
     }
 
     @FXML
-    void backButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void saveButtonOnAction(ActionEvent event) {
-
+        try {
+            boolean isSaved = userBo.saveUser(new UserDto(txtId.getText(), txtName.getText(),
+                    txtContactNumber.getText(), txtJobRole.getText(),
+                    txtUsername.getText(),txtPassword.getText())
+            );
+            if (isSaved) {
+                new Alert(Alert.AlertType.INFORMATION,"User Saved!").show();
+                loadUserTable();
+                clearFields();
+            }
+        } catch (SQLIntegrityConstraintViolationException ex){
+            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void updateButtonOnAction(ActionEvent event) {
-
+        try {
+            boolean isUpdated = userBo.updateUser(new UserDto(txtId.getText(), txtName.getText(),
+                    txtContactNumber.getText(), txtJobRole.getText(),
+                    txtUsername.getText(),txtPassword.getText())
+            );
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION,"User Updated!").show();
+                loadUserTable();
+                clearFields();
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
+    @FXML
+    void backButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/DashboardForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
