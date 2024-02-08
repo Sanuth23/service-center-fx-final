@@ -79,7 +79,7 @@ public class AdminDashboardFormController {
     }
 
     @FXML
-    void orderItemButtonOnAction(ActionEvent event) {
+    void orderDetailButtonOnAction(ActionEvent event) {
 
     }
 

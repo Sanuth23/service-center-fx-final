@@ -46,6 +46,7 @@ public class DashboardFormController {
 
         date.setCycleCount(Animation.INDEFINITE);
         date.play();
+
     }
     @FXML
     void customerButtonOnAction(ActionEvent event) {
@@ -75,11 +76,19 @@ public class DashboardFormController {
 
     @FXML
     void logoutButtonOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"))));
+            stage.setTitle("Login Form");
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void orderItemButtonOnAction(ActionEvent event) {
+    void orderDetailButtonOnAction(ActionEvent event) {
 
     }
 
